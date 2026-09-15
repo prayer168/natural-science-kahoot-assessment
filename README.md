@@ -2,6 +2,26 @@
 
 這是一套給國小自然科教師使用的 Agent Skill，適合單元教學、期中考與期末考複習，可設計前測、形成性評量、後測與 Kahoot 題庫。
 
+目前版本：**v1.1.0**
+
+## 快速互動選題
+
+只要提供「教學單元＋活動名稱」，技能就會：
+
+1. 自動整理可評量的概念、活動證據與常見迷思。
+2. 以複選清單讓教師選擇互動內容與題型。
+3. 產生候選題目卡片，再以複選清單選出要保留的題目。
+4. 完成評量驗證與科學查證。
+5. 輸出可供 Kahoot 官方試算表匯入的 `.xlsx` 題庫。
+
+例如：
+
+```text
+快速建立 Kahoot：六年級〈探索天氣變化〉；活動包括氣溫、雲量、風向與降雨觀測。
+```
+
+年級、版本、題數或難度沒有提供時，技能會先依內容推估，並列出待確認資料。
+
 ## 主要功能
 
 - 先以文字確認年級、單元、學習重點與評量用途
@@ -18,6 +38,7 @@
 natural-science-kahoot-assessment/
 ├── SKILL.md
 ├── README.md
+├── VERSION
 └── agents/
     └── openai.yaml
 ```
@@ -36,15 +57,15 @@ $natural-science-kahoot-assessment
 
 ## Kahoot 格式提醒
 
-`.xlsx` 是 Kahoot 試算表題庫匯入格式。是非題會以「是／否」兩個選項呈現，多選題則使用 `Correct answer(s)` 欄位記錄多個答案編號。PDF、PowerPoint、Google Slides、URL 等屬於 Kahoot AI 產題素材或同步來源，不等同於試算表直接匯入。
+`.xlsx` 是 Kahoot 試算表題庫匯入格式。技能可以自動產生可匯入檔案，但除非另有官方 API、OAuth 或明確授權的瀏覽器自動化，不能宣稱直接寫入 Kahoot 帳號；教師仍需在 Kahoot 介面選取並上傳檔案。是非題會以「是／否」兩個選項呈現，多選題則使用 `Correct answer(s)` 欄位記錄多個答案編號。PDF、PowerPoint、Google Slides、URL 等屬於 Kahoot AI 產題素材或同步來源，不等同於試算表直接匯入。
 
 ## 分享到 GitHub
 
 可將本資料夾上傳至公開或私人 GitHub repository。建議保留此資料夾名稱，方便日後安裝與版本更新。
 
 ```bash
-git add natural-science-kahoot-assessment
-git commit -m "Add natural science Kahoot assessment skill"
+git add .
+git commit -m "Update natural science Kahoot assessment skill"
 git push
 ```
 
