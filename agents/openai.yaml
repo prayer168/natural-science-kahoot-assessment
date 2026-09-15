@@ -1,5 +1,5 @@
 interface:
   display_name: "自然科 Kahoot 多元評量"
-  short_description: "生成自然科 Kahoot 題庫、驗證、迷思診斷與學習分析"
+  short_description: "從單元活動快速選題並輸出 Kahoot 題庫"
   brand_color: "#2F80ED"
-  default_prompt: "使用 $natural-science-kahoot-assessment 設計一份自然科單元評量。"
+  default_prompt: "使用 $natural-science-kahoot-assessment，從教學單元與活動名稱快速建立可匯入 Kahoot 的互動題庫。"
